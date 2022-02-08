@@ -1,2 +1,2 @@
 #!/bin/sh
-docker run --rm --volume $PWD:/hostdir coderitter/pulp-riscv-gnu-toolchain "$@"
+docker run --rm --entrypoint riscv32-unknown-elf-gcc --volume $PWD:/hostdir coderitter/pulp-riscv-gnu-toolchain "$@"

@@ -10,7 +10,7 @@ In your project, create a shell script for the RISC V compiler executable. You c
 
 ```
 #!/bin/sh
-docker run --rm --volume $PWD:/hostdir coderitter/pulp-riscv-gnu-toolchain --entrypoint riscv32-unknown-elf-gcc "$@"
+docker run --rm --entrypoint riscv32-unknown-elf-gcc --volume $PWD:/hostdir coderitter/pulp-riscv-gnu-toolchain "$@"
 ```
 
 This call to `docker run` will create a temporary Docker container with the current directory mounted into Docker container. It then executes the RISC V compiler executable and forwards any parameters which were made when the script was executed.
