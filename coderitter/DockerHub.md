@@ -13,7 +13,9 @@ docker run --rm --volume $PWD:/hostdir coderitter/pulp-riscv-gnu-toolchain --ent
 
 This call to `docker run` will create a temporary Docker container with the current directory mounted into Docker container. It then executes the RISC V compiler executable and forwards any parameters which were made when the script was executed.
 
-Here is an example call of the script.
+The last step is to set the permission of the file to be executable `chmod a+x riscv32-unknown-elf-gcc`.
+
+Now you can use the script as if the compiler itself was installed in your host system.
 
 ```
 ./riscv32-unknown-elf-gcc -std=c99 -march=rv32imfdcxpulpv2 src -o build/firmware
