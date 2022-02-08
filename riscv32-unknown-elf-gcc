@@ -1,0 +1,2 @@
+#!/bin/sh
+docker run --rm --volume $PWD:/root coderitter/pulp-riscv-gnu-toolchain "$@"
