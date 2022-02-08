@@ -10,7 +10,6 @@ In your project, create a shell script for the RISC V compiler executable. You c
 
 ```
 #!/bin/sh
-
 docker run --rm --volume $PWD:/hostdir coderitter/pulp-riscv-gnu-toolchain --entrypoint riscv32-unknown-elf-gcc "$@"
 ```
 
