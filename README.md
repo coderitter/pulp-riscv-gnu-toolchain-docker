@@ -1,6 +1,6 @@
 # A Docker file for the PULP RISC-V GNU Compiler Toolchain
 
-This packages contains a Dockerfile which will compile the most recent PULP RISC-V GNU Compiler Toolchain.
+This repo contains a Dockerfile which will compile the most recent PULP RISC-V GNU Compiler Toolchain.
 
 ## Docker Hub
 
@@ -21,7 +21,7 @@ The last step is to set the permission of the file so that is executable.
 chmod a+x riscv32-unknown-elf-gcc
 ```
 
-Now you can use the script as if the compiler itself was installed in your host system.
+Now you can use the script as if the compiler itself was installed on your host system.
 
 ```
 ./riscv32-unknown-elf-gcc -std=c99 -march=rv32imfdcxpulpv2 src -o build/firmware
@@ -29,4 +29,4 @@ Now you can use the script as if the compiler itself was installed in your host 
 
 ## Coderitter
 
-The directory `coderitter` contains the Docker Hub readme and Coderitter specific scripts to build the image.
+The directory `Dockerhub` contains the Docker Hub readme and Coderitter specific scripts to build the image.
