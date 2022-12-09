@@ -11,7 +11,7 @@ In your project, create a shell script for the RISC V compiler executable. You c
 docker run --rm --entrypoint riscv32-unknown-elf-gcc --volume $PWD:/hostdir coderitter/pulp-riscv-gnu-toolchain "$@"
 ```
 
-This call to `docker run` will create a temporary Docker container with the current directory mounted into Docker container. It then executes the RISC V compiler executable and forwards any parameters which were made when the script was executed.
+This call to `docker run` will create a temporary Docker container with the current directory mounted into it. It then executes the RISC V compiler executable and forwards any parameters which were made when the script was executed.
 
 The last step is to set the permission of the file so that is executable.
 
@@ -19,7 +19,7 @@ The last step is to set the permission of the file so that is executable.
 chmod a+x riscv32-unknown-elf-gcc
 ```
 
-Now you can use the script as if the compiler itself was installed in your host system.
+Now you can use the script as if the compiler itself was installed on your host system. If the needed Docker image is not present, Docker will automatically download it from the Docker Hub.
 
 ```
 ./riscv32-unknown-elf-gcc -std=c99 -march=rv32imfdcxpulpv2 src -o build/firmware
