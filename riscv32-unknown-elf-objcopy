@@ -1,2 +1,0 @@
-#!/bin/sh
-docker run --rm --entrypoint riscv32-unknown-elf-objcopy --volume $PWD:/hostdir coderitter/pulp-riscv-gnu-toolchain "$@"

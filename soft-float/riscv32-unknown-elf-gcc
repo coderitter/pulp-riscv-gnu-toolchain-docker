@@ -1,0 +1,2 @@
+#!/bin/sh
+docker run --rm --entrypoint riscv32-unknown-elf-gcc --volume $PWD:/hostdir coderitter/pulp-riscv-gnu-toolchain:9.2.0-soft-float "$@"
